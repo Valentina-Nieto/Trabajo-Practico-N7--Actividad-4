@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace actividad4TP7
 {
@@ -11,20 +11,19 @@ namespace actividad4TP7
             la cantidad de la misma, luego se debe mostrar el monto correspondiente en Pesos Argentinos
             y que se presione una tecla para permitir realizar una nueva conversión. Al momento de
             seleccionar la moneda, también se debe brindar una opción para finalizar el programa.*/
-            
-            
+
+
             float cotizacion = 0f, cotizacion2 = 0f;
             float montoEnDolares = 0f;
             float montoEnEuros = 0f;
             float montoEnPesos = 0f, montoEnPesos2 = 0f;
             string valor = "", opcion = "";
-            
-            while (!opcion.Contains("x") || !opcion.Contains("X") )
+
+            while (!opcion.Contains("x") && !opcion.Contains("X"))
             {
                 Console.WriteLine("Bienvenidx al Sitema de Conversión de Monedas");
                 Console.WriteLine("Presione 'D' si quiere hacer la conversion de Dólares a Pesos Argentinos");
                 Console.WriteLine("Presione 'E' si quiere hacer la conversion de Euros a Pesos Argentinos");
-                Console.WriteLine("Presione 'X' si quiere salir del programa");
 
                 opcion = Console.ReadLine();
 
@@ -43,7 +42,7 @@ namespace actividad4TP7
                         cotizacion = Convert.ToSingle(valor);
                         montoEnPesos = montoEnDolares * cotizacion;
 
-                        Console.WriteLine("Su monto de Dólares es de ${0}", montoEnPesos);
+                        Console.WriteLine("Su monto de Dólares es de {0} pesos argentinos", montoEnPesos);
                         break;
 
                     case "e" or "E":
@@ -59,18 +58,15 @@ namespace actividad4TP7
                         cotizacion2 = Convert.ToSingle(valor);
                         montoEnPesos2 = montoEnEuros * cotizacion2;
 
-                        Console.WriteLine("Su monto de Euros es de ${0}", montoEnPesos2);
+                        Console.WriteLine("Su monto de Euros es de {0} pesos argentinos", montoEnPesos2);
                         break;
 
-                    case "x" or "X":
-                        Console.WriteLine("Salimos del Programa...");
-                        Console.ReadKey();
-                        break;
                 }
-                if (opcion != "" && !opcion.Contains("x") && !opcion.Contains("X"))
+                if (opcion != "" && opcion != "x" && opcion != "X")
                 {
-                Console.WriteLine("Presione una tecla si 'i' quiere realizar otra conversion, o presione 'x' si quiere salir del programa");
-                opcion = Console.ReadLine();
+                    Console.WriteLine("Presione una tecla si 'i' quiere realizar otra conversion, o presione 'x' si quiere salir del programa");
+                    opcion = Console.ReadLine();
+
                 }
             }
         }
