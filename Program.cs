@@ -1,4 +1,4 @@
-using System;
+using Susing System;
 
 namespace actividad4TP7
 {
@@ -13,10 +13,10 @@ namespace actividad4TP7
             seleccionar la moneda, también se debe brindar una opción para finalizar el programa.*/
 
 
-            float cotizacion = 0f, cotizacion2 = 0f;
-            float montoEnDolares = 0f;
-            float montoEnEuros = 0f;
-            float montoEnPesos = 0f, montoEnPesos2 = 0f;
+            float cotizacion = 0.0f, cotizacion2 = 0.0f;
+            float montoEnDolares = 0.0f;
+            float montoEnEuros = 0.0f;
+            float montoEnPesos = 0.0f, montoEnPesos2 = 0.0f;
             string valor = "", opcion = "";
 
             while (!opcion.Contains("x") && !opcion.Contains("X"))
